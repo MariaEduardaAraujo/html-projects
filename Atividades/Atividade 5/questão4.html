@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 4</title>
+		<script type="text/javascript">
+			function exibir(){
+				var nome, qtdLetras;
+				nome = document.getElementById("nome").value;
+				qtdLetras = nome.length;
+				alert(nome + " // " + qtdLetras);
+			}
+		</script>
+		<style type="text/css">
+			p{
+				font-size: 10pt;
+			}
+		</style>
+	</head>
+
+	<body>
+		<label>Insira seu nome: </label>
+		<input type="text" id="nome"><br><br>
+
+		<button onclick="exibir()">Exibir Quantidade</button>
+
+		<br><br><p>Espaços estão inclusos no cálculo*</p>
+	</body>
+</html>

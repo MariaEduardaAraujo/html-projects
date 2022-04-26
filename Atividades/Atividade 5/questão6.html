@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 6</title>
+		<script type="text/javascript">
+			function acender(){
+				document.getElementById("img1").src = "https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true"
+			}
+			function apagar(){
+				document.getElementById("img1").src = "https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true"
+			}
+		</script>
+	</head>
+	
+	<body>
+		<img onmouseover="acender()" id= "img1" src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true">
+		<button onclick="apagar()">Apagar</button>
+	</body>
+</html>

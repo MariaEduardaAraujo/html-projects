@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Atividade 1 - Página 4 - Form</title>
+		<link rel="stylesheet" type="text/css" href="atividade_1_pagina_4.css">
+	</head>
+		
+	<body>
+		<h4 id="sistema">SISTEMA DE GESTÃO ACADÊMICA</h4>
+		<h4 id="manutencao">MANUTENÇÃO DE USUÁRIOS DO SISTEMA INTERNO</h4>
+		
+		<form class="label" >
+			<label class="label" id="login"><strong>Login </strong></label>
+			<input type="text" name="login" required=""><br>
+
+			<label class="label" id="senha"><strong>Senha </strong></label>
+			<input type="password" name="senha" required=""><br>
+
+			<label class="label" id="status"><strong>Status </strong></label>
+			<select>
+				<option value="1">Inativo</option>
+				<option value="2">Ativo</option>
+			</select><br>
+
+			<label class="label" id="tipo"><strong>Tipo </strong></label>
+			<input type="radio" value="tecnico" name="tipo"> Técnico
+			<input type="radio" value="professor" name="tipo"> Professor
+			<input type="radio" value="aluno" name="tipo"> Aluno<br>
+
+			<label class="label"  id="datac"><strong>Data Criação </strong></label>
+			<input type="data" name="data"><br>
+
+			<label class="label" id="perfil"><strong>Perfil </strong></label>
+			<input type="radio" value="convidado" name="perfil" id="convid"> Convidado
+			<input type="radio" value="administrador" name="perfil" id="adm"> Adiministrador<br>
+
+			<label class="label" id="observacoes"><strong>Observações </strong></label>
+			<textarea id="texto" rows="5" cols="30"></textarea><br>
+
+			<div id="check">
+				<input type="checkbox" value="compras" name="compras"> Compras
+				<input type="checkbox" value="biblioteca" name="biblioteca"> Biblioteca
+				<input type="checkbox" value="academico" name="academico"> Acadêmico<br>
+			</div>
+
+			<label class="label"><strong>Módulos </strong></label><br>
+			<input type="checkbox" value="documentacao" name="documentacao" id="documento"> Documentação
+			<input type="checkbox" value="rh" name="rh" id="rh"> Recursos Humanos<br>
+
+			<button type="submit" name="cadastrar" id="cadastro">Cadastrar</button>
+			<button type="reset" name="excluir" id="reset">Excluir</button>
+		</form>
+
+	</body>
+</html>

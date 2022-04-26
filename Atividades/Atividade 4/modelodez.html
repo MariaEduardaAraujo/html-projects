@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<meta charset="utf-8">
+		<title>Modelo 10</title>
+		<style type="text/css">
+			body{
+				font: 10pt sans-serif;
+
+				background-color: #000000;
+
+				margin: 0px;
+				padding: 0px;
+			}
+			p{
+				color: #ffffff;
+			}
+			#tab_um{
+				background-color: #999999;
+				border-collapse: collapse;
+			}
+			#tab_dois{
+				background-color: #999999;
+				
+				border-collapse: separate;
+				border-spacing: 5px;
+				border: solid 1px #ff0000;
+			 }
+			td{
+				width: 90pt;
+				height: 30pt;
+
+				border: solid 1px #0000cd;	
+			}
+			.left{
+				text-align: left;
+			}
+			.center{
+				text-align: center;
+			}
+			.right{
+				text-align: right;
+			}
+			.linhadois{
+				background-color: #ffffff;
+				font-weight: bold;
+			}
+			.top{
+				vertical-align: top;
+			}
+			.bottom{
+				vertical-align: bottom;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<p>Uma tabela simples onde cada linha tem 90pt de largura e 30pt de altura (utiliza fonte 10pt sem serifa)</p>
+		<table id="tab_um">
+			<tr>
+				<td class="left top">L1 C1</td>
+				<td class="center top">L1 C2</td>
+				<td class="right top">L1 C3</td>
+			</tr>
+			<tr>
+				<td class="left  linhadois ">L2 C1</td>
+				<td class="center linhadois">L2 C2</td>
+				<td class="right  linhadois">L2 C3</td>
+			</tr>
+			<tr>
+				<td class="left bottom">L3 C1</td>
+				<td class="center bottom">L3 C2</td>
+				<td class="right bottom">L3 C3</td>
+			</tr>
+		</table>
+		<p>Parecida com a tabela acima, mas com duas diferenças: espaçamento de 4pt entre cada célula e uma borda externa...</p>
+
+		<table id="tab_dois">
+			<tr>
+				<td class="left top">L1 C1</td>
+				<td class="center top">L1 C2</td>
+				<td class="right top">L1 C3</td>
+			</tr>
+
+			<tr>
+				<td class="left linhadois">L2 C1</td>
+				<td class="center linhadois">L2 C2</td>
+				<td class="right linhadois">L2 C3</td>
+			</tr>
+
+			<tr>
+				<td class="left bottom">L3 C1</td>
+				<td class="center bottom">L3 C2</td>
+				<td class="right bottom">L3 C3</td>
+			</tr>
+		</table>
+		<p>* Dica: dê uma olhada nas propriedades border-collapse, border-spacing e vertical-align...</p>	
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Modelo 9</title>
+		<style type="text/css">
+			body{
+				font: 10pt sans-serif;
+
+				margin: 0px;
+				padding: 0px;
+			}
+			.divs{
+				background-color: #00aaff;
+
+				box-sizing: border-box;
+				border: solid 1px #000000;
+			}
+			.itens{
+				box-sizing: border-box;
+				border: solid 1px #000000;
+			}
+			#divum{
+				width: 200pt;
+
+				padding: 0px;
+			}
+			#divdois{
+				width: 200pt;
+				height: 200pt;
+
+				padding: 0px;
+			}
+			#divtres{
+				width: 200pt;
+				height: 100pt;
+
+				padding: 0px;
+			}
+			#divquatro{
+				width: 200pt;
+				height: 100pt;
+
+				padding: 0px;
+
+				overflow: hidden;
+			}
+			#divcinco{
+				width: 200pt;
+				height: 100pt;
+
+				padding: 0px;
+
+				overflow: auto;
+			}
+			.mudancas{
+				color: #0000ff; 
+
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<p>* As fontes são todas 10pt sem serifa. Os div utilizam box-sizing com o valor border-box.</p>
+		<p>Etapa 1: Um div largura de 200pt, sem altura especificada, espaçamento interno de 0px e cinco outros div dentro</p>
+
+		<div class="divs" id="divum">
+			<div class="itens">Item 1</div>
+			<div class="itens">Item 2</div>
+			<div class="itens">Item 3</div>
+			<div class="itens">Item 4</div>
+			<div class="itens">Item 5</div>
+		</div>
+
+		<p>Etapa 2: Um div com 200pt x 200pt, espaçamento interno de 0px e cinco outros div dentro</p>
+		
+		<div class="divs" id="divdois">
+			<div class="itens">Item 1</div>
+			<div class="itens">Item 2</div>
+			<div class="itens">Item 3</div>
+			<div class="itens">Item 4</div>
+			<div class="itens">Item 5</div>
+		</div>
+
+		<p>Etapa 3: Um div com 200pt x 100pt, espaçamento interno de 0px e dez outros div dentro</p>
+		
+		<div class="divs" id="divtres">
+			<div class="itens">Item 1</div>
+			<div class="itens">Item 2</div>
+			<div class="itens">Item 3</div>
+			<div class="itens">Item 4</div>
+			<div class="itens">Item 5</div>
+			<div class="itens">Item 6</div>
+			<div class="itens">Item 7</div>
+			<div class="itens">Item 8</div>
+			<div class="itens">Item 9</div>
+			<div class="itens">Item 10</div>
+		</div>
+		<p class="mudancas">* Repare que alguns items excederam os limites do div, e a aparência final não ficou legal...</p>
+
+		<p>Etapa 4: Um div com 200pt x 100pt, espaçamento interno de 0px, <span class="mudancas">propriedade overflow diferente da original</span> e dez outros div dentro</p>
+
+		<div class="divs" id="divquatro">
+			<div class="itens">Item 1</div>
+			<div class="itens">Item 2</div>
+			<div class="itens">Item 3</div>
+			<div class="itens">Item 4</div>
+			<div class="itens">Item 5</div>
+			<div class="itens">Item 6</div>
+			<div class="itens">Item 7</div>
+			<div class="itens">Item 8</div>
+			<div class="itens">Item 9</div>
+			<div class="itens">Item 10</div>
+		</div>
+		<p class="mudancas">* Repare que os itens excedentes desapareceram...</p>
+
+		<p>Etapa final: Um div com 200pt x 100pt, espaçamento interno de 0px, <span class="mudancas">propriedade overflow alterada</span> e dez outros div dentro</p>
+
+		<div class="divs" id="divcinco">
+			<div class="itens">Item 1</div>
+			<div class="itens">Item 2</div>
+			<div class="itens">Item 3</div>
+			<div class="itens">Item 4</div>
+			<div class="itens">Item 5</div>
+			<div class="itens">Item 6</div>
+			<div class="itens">Item 7</div>
+			<div class="itens">Item 8</div>
+			<div class="itens">Item 9</div>
+			<div class="itens">Item 10</div>
+		</div>
+	</body>
+</html>

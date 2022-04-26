@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 10</title>
+		<script type="text/javascript">
+			var cont1 = 0;
+			var cont2 = 0;
+
+			function adicionar(){
+    			var p1 = document.getElementById("p1");
+    			var p2 = document.getElementById("p2");
+    		
+    			var idade = document.getElementById("idade");
+    			var idade = Number(idade.value);
+
+    			if (idade < 18 && idade >= 0){
+        			cont1++;
+    			}else{
+        			cont2++;
+    			}
+
+    			document.getElementById("p1").innerHTML = 
+    			"Maiores de idade: " + cont2 
+    			document.getElementById("p2").innerHTML = 
+    			"Menores de idade: " + cont1;
+			}			
+		</script>
+		<style type="text/css">
+			div{
+				margin-top: 6px;
+				margin-bottom: 10 px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>Digite as idades:</p>
+        <input type="number" id="idade">
+        <button id='bt' onclick="adicionar()">Adicionar</button>
+
+        <p id="p1">Maiores de idade: </p>
+        <p id="p2">Menores de idade: </p>
+	</body>
+</html>

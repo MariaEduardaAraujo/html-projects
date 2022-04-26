@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body{
+	font-size: 15px;
+}
+.parag {
+	font-size: 10px;
+	text-indent: 20px;
+}
+#tabela{
+	table-layout: fixed;
+}
+th, td{
+	padding: 3px;
+	width: 10px;
+	border-style: ridge;
+	border-color: #dbdbdb;
+	border-width: 2.9px;
+}

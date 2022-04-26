@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body{
+	width: 600px;
+	height: auto;
+	margin: -10px auto 0px auto;
+	padding: 10px 10px 10px 10px;
+
+	font-family: sans-serif;
+}
+input, select, option, textarea{
+	border: groove 2px #d9d9d9; 
+	margin: 4px;
+}
+#sistema{
+	background-color: #cc9900;
+	margin-bottom: 5px;
+}
+#manutencao{
+	margin-top: 10px;
+}
+.label{
+	margin-right: 90px;
+	padding: 0px;
+}
+#login{
+	margin-right: 94px;
+}
+#status{
+	margin-right: 89px;
+}
+#tipo{
+	 margin-right: 103px;
+}
+#datac{
+	margin-right: 40px;
+}
+#perfil{
+	margin-right: 97px;
+}
+#observacoes{
+	position: fixed;
+	vertical-align: middle;
+	margin-top: 30px;
+}
+#texto{
+	border: 
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	position: relative;
+	margin-left: 146px;
+}
+#check{
+	margin-left: 142px;
+	margin-top: 20px;
+}
+#documento{
+	margin-left: 146px;	
+	margin-top: 20px;
+}
+#cadastro{
+	margin-top: 20px;
+	font-size: 15px;
+	border: groove 2px #d9d9d9;
+}
+#reset{
+	margin-top: 20px;
+	font-size: 15px;
+	border: groove 2px #d9d9d9;
+}

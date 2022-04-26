@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body{
+	width: 500px;
+	display: block;
+
+	font-size: 20px;
+	font: Times New Roman, serif;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 2</title>
+		<script type="text/javascript">
+			function soma(){
+				var num1 = parseInt(document.getElementById("num1").value);
+				var num2 = parseInt(document.getElementById("num2").value);
+				var resultado = (num1 + num2);
+				alert("O resultado é: " + resultado);
+			}
+		</script>
+	</head>
+
+	<body>
+		<p>SOMA DE DOIS NÚMEROS:</p><br>
+
+		<label>Número 1: </label>
+		<input type="text" id="num1"><br>
+
+		<label>Número 2: </label>
+		<input type="text" id="num2"><br><br>
+		<button onclick="soma()">Somar</button>
+	</body>
+</html>

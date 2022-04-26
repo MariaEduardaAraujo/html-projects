@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Questão 13</title>
+		<script type="text/javascript">
+			var senha = document.getElementById("senha").value;
+			var senha2 = document.getElementById("senha2").value;
+			
+			function valida(){
+				if (senha == senha2) {
+					alert("Bem-Vindo!");
+				}
+				else{
+					alert("Senhas incorretas!");
+				}
+			} //Validação não funciona!!
+		</script>
+
+		<style type="text/css">
+			body{
+				width: 600px;
+				height: auto;
+
+				font-family: sans-serif;
+			}
+			label, input{
+				margin-bottom: 6px;
+			}
+			#user{
+				margin-right: 10px;
+			}
+			#senha{
+				margin-right: 21px;
+			}
+			#senha2{
+				margin-right: 10px;
+			}
+		</style>
+	</head>
+		
+	<body>
+		<form id="form">
+			<label id="user"><strong>Usuário: </strong></label>
+			<input type="text" name="user" id="user" required=""><br>
+
+			<label id="senha"><strong>Senha: </strong></label>
+			<input type="password" id="senha" maxlength="10" minlength="6" required><br>
+
+			<label id="senha2"><strong>Confirmar senha: </strong></label>
+			<input type="password" id="senha2" maxlength= "10" minlength="6" required><br>	
+
+			<button type="submit" id="bt" onclick="valida()">Enviar</button>
+		</form>
+
+	</body>
+</html>

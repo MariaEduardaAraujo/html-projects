@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Questão 11</title>
+		<script type="text/javascript">
+			function calcula(){
+			
+			var salarioAntigo, salarioNovo, procentagem;
+			
+			salarioAntigo = parseInt(document.getElementById("valor").value);
+			
+			alert(salarioAntigo);
+			
+			if (salarioAntigo <= 280) {
+  				salarioNovo = salarioAntigo + (salarioAntigo*0.2);
+  				procentagem = 20
+			} else if (salarioAntigo < 700) {
+  				salarioNovo = salarioAntigo + (salarioAntigo*0.15);
+  				procentagem = 15
+			} else if (salarioAntigo < 1500){
+  				salarioNovo = salarioAntigo + (salarioAntigo*0.1);
+  				procentagem = 10
+			}else{
+  				salarioNovo = salarioAntigo + (salarioAntigo*0.05);
+  				procentagem = 0.5
+			}
+			
+			document.getElementById("p1").innerHTML=
+				"Salário antes do reajuste: R$ "+ salarioAntigo;
+
+			document.getElementById("p2").innerHTML =
+				"Percentual do reajuste: "	+ procentagem + "%";
+			
+			document.getElementById("p3").innerHTML =
+				"Valor do aumento: R$ " + (salarioNovo - salarioAntigo);
+			
+			document.getElementById("p4").innerHTML=
+				"Novo salário, após o aumento: R$ "+ salarioNovo;
+			}
+		</script>
+		<style type="text/css">
+			img{
+				width: 180px;
+				height: 100px;
+			}
+			body{
+				width: 420px;
+				height: 260px;
+    			padding: 5px 5px 25px 5px;
+    			
+    			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.999);
+			}
+		</style>
+	</head>
+
+	<body>
+		<img src="https://hqscomcafe.com.br/wp-content/uploads/2020/09/Produtos-das-Organizacoes-Tabajaras-800x445.jpg"><br>
+
+		<label> Informe o salário atual: </label>
+		<input type="text" name="valor" id="valor">
+
+		<button id="bt1" onclick="calcula()">Reajustar</button>
+
+		<p id="p1">Salário antes do reajuste:</p>
+		<p id="p2">Percentual de aumento aplicado</p>
+		<p id="p3">Valor do aumento:</p>
+		<p id="p4">Novo salário, após o aumento:</p>
+	</body>
+
+</html>
