@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgba(241, 237, 237, 0.836);	
+    background: url('greedfallimagem.jpg') no-repeat fixed;
+    background-size: 99.99%;
+
+    font-family: Helvetica, sans-serif;
+    color: #ffffff;
+    
+    width: 970px;
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px rgba(66, 65, 65, 0.8);
+    padding: 10px 10px 10px 10px;
+}
+a{
+	color: #ffffff;
+
+}
+a:hover{
+	text-decoration: underline;
+}
