@@ -1,3 +1,3 @@
 # Undertale 🌼
 
-Todos os arquivos necessários estão nas pastas
+Esta página do jogo Undertale foi um projeto desenvolvido por mim para uma disciplica de programação Web do meu curso no Ensino Médio. O estado desta página não reflete meus conhecimentos atuais e todos os arquivos necessários estão neste repositório.
