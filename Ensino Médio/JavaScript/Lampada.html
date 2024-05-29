@@ -1,83 +1,97 @@
 <!-- Lâmpada 1 -->
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<title>Teste JavaScript 2</title>
-	<meta charset="utf-8"/>
-	<script type="text/javascript">
-		function acendeLampada(){
-			document.getElementById("luz").src = "C:/Users/josim/Documents/HTML/projeto-glass-html5/_imagens/lampada-acesa.jpg";
-		}
-		function apagaLampada(){
-			document.getElementById("luz").src = "C:/Users/josim/Documents/HTML/projeto-glass-html5/_imagens/lampada-apagada.jpg";
-		}
-		function quebraLampada(){
-			document.getElementById("luz").src = "C:/Users/josim/Documents/HTML/projeto-glass-html5/_imagens/lampada-quebrada.jpg";
-		}
-	</script>
-</head>
-<body>
-	<h1>Acenda a lâmpada</h1>
-	<img src="C:/Users/josim/Documents/HTML/projeto-glass-html5/_imagens/lampada-apagada.jpg" id="luz" onmousemove="acendeLampada()" onmouseout = "apagaLampada()" onclick="quebraLampada()"/>
-</body>
+  <head>
+    <title>Teste JavaScript 2</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      function acendeLampada1() {
+        document.getElementById("luz1").src = "Arquivos/gif/lamp_on.gif";
+      }
+      function apagaLampada1() {
+        document.getElementById("luz1").src = "Arquivos/gif/lamp_off.gif";
+      }
+      function quebraLampada1() {
+        document.getElementById("luz1").src ="Arquivos/gif/lampada-quebrada.gif";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="divLamp1">
+      <h1>Acenda a lâmpada 1</h1>
+      <img
+        src="Arquivos/gif/lamp_off.gif"
+        id="luz1"
+        onmousemove="acendeLampada1()"
+        onmouseout="apagaLampada1()"
+        onclick="quebraLampada1()"/>
+    </div>
+  </body>
 </html>
 
 <!-- Lâmpada 2 -->
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-	<title>Teste JavaScript 3</title>
-	<meta charset="utf-8"/>
-	<script type="text/javascript">
-		var quebrada = false;
-		function mudaLampada(tipo){
-			if (tipo == 1) {
-				arquivo = "C:/Users/josim/Documents/HTML/projeto-glass-html5/_imagens/lampada-acesa.jpg"
-			}
-			if (tipo == 2) {
-				arquivo = "C:/Users/josim/Documents/HTML/projeto-glass-html5/_imagens/lampada-apagada.jpg"
-			}
-			if (tipo == 3) {
-				arquivo = "C:/Users/josim/Documents/HTML/projeto-glass-html5/_imagens/lampada-quebrada.jpg"
-			}
-			if (!quebrada) {
-				document.getElementById("luz").src = arquivo;z
-				if (tipo == 3) {
-					quebrada = true;
-				}
-			}
-		}
-	</script>
-</head>
-<body>
-	<h1>Acenda a lâmpada</h1>
-	<img src="C:/Users/josim/Documents/HTML/projeto-glass-html5/_imagens/lampada-apagada.jpg" id="luz" onmousemove="mudaLampada(1)" onmouseout = "mudaLampada(2)" onclick="mudaLampada(3)"/>
-</body>
+  <head>
+    <title>Teste JavaScript 3</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      var quebrada2 = false;
+      function mudaLampada2(tipo) {
+        if (tipo == 1) {
+          arquivo = "Arquivos/gif/lamp_on.gif";
+        } else if (tipo == 2) {
+          arquivo = "Arquivos/gif/lamp_off.gif";
+        } else if (tipo == 3) {
+          arquivo = "Arquivos/gif/lampada-quebrada.gif";
+        }
+
+        if (!quebrada2) {
+          document.getElementById("luz2").src = arquivo;
+          if (tipo == 3) {
+            quebrada2 = true;
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Acenda a lâmpada 2</h1>
+    <img
+      src="Arquivos/gif/lamp_off.gif"
+      id="luz2"
+      onmousemove="mudaLampada2(1)"
+      onmouseout="mudaLampada2(2)"
+      onclick="mudaLampada2(3)"/>
+  </body>
 </html>
 
 <!-- Lâmpada 3 -->
 <!DOCTYPE html>
 
 <html lang="pt-br">
-<head>
+  <head>
     <title>Teste JavaScript 3.1</title>
     <meta charset="utf-8" />
     <script>
-        var quebrada = false
-
-        function mudaLampada(tipo){
-
-            if (!quebrada) {
-                document.getElementById("luz").src = "_imagens/" + tipo + ".jpg";
-            }
-            if (tipo == 'lampada-quebrada') {
-                quebrada = true;
-            }
+      var quebrada3 = false;
+      function mudaLampada3(tipo) {
+        if (!quebrada3) {
+          document.getElementById("luz3").src = "Arquivos/gif/" + tipo + ".gif";
+          if (tipo === "lampada-quebrada") {
+            quebrada3 = true;
+          }
         }
+      }
     </script>
-</head>
-<body>
-    <h1>Acenda a lâmpada</h1>
-    <img src="_imagens/lampada-apagada.jpg" id="luz" onmouseover="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')" />
-</body>
+  </head>
+  <body>
+    <h1>Acenda a lâmpada 3</h1>
+    <img
+      src="Arquivos/gif/lamp_off.gif"
+      id="luz3"
+      onmouseover="mudaLampada3('lamp_on')"
+      onmouseout="mudaLampada3('lamp_off')"
+      onclick="mudaLampada3('lampada-quebrada')"/>
+  </body>
 </html>

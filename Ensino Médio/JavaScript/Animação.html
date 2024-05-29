@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	
-	<head>
-		<script src="js/jquery-3.6.0.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#quatro_pq").mouseover(function(){
-					$("#um").hide();
-					$("#dois").hide();
-					$("#tres").hide();
-					$("#quatro").show();
-				});
-				$("#tres_pq").mouseover(function(){
-					$("#um").hide();
-					$("#dois").hide();
-					$("#tres").show();
-					$("#quatro").hide();
-				});
-				$("#dois_pq").mouseover(function(){
-					$("#um").hide();
-					$("#dois").show();
-					$("#tres").hide();
-					$("#quatro").hide();
-				});
-				$("#um_pq").mouseover(function(){
-					$("#um").show();
-					$("#dois").hide();
-					$("#tres").hide();
-					$("#quatro").hide();
-				});
-			});
-		</script>
-	
-		<style type="text/css">
-			body{
-				background-color: #d8d8bf;
-			}
-			#img_gr{
-				width:960px;
-				height:600px;
-				border:solid;
-				overflow:hidden;
-			}
-			#img_pq img{
-				margin-left:60px;
-			}
-		</style>
-		
-	</head>
-	
-	<body>
-		<div id="img_gr">
-			<img id="um" src="img/um.jpg">
-			<img id="dois" src="img/dois.jpg">
-			<img id="tres" src="img/tres.jpg">
-			<img id="quatro" src="img/quatro.jpg">
-		</div>
-		
-		<div id="img_pq">
-			<img id="um_pq" src="img/um_pq.jpg">
-			<img id="dois_pq" src="img/dois_pq.jpg">
-			<img id="tres_pq" src="img/tres_pq.jpg">
-			<img id="quatro_pq" src="img/quatro_pq.jpg">
-		</div>
-	</body>
-	
+  <head>
+    <script src="Arquivos/jquery-3.6.0.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#quatro_pq").mouseover(function () {
+          $("#um").hide();
+          $("#dois").hide();
+          $("#tres").hide();
+          $("#quatro").show();
+        });
+        $("#tres_pq").mouseover(function () {
+          $("#um").hide();
+          $("#dois").hide();
+          $("#tres").show();
+          $("#quatro").hide();
+        });
+        $("#dois_pq").mouseover(function () {
+          $("#um").hide();
+          $("#dois").show();
+          $("#tres").hide();
+          $("#quatro").hide();
+        });
+        $("#um_pq").mouseover(function () {
+          $("#um").show();
+          $("#dois").hide();
+          $("#tres").hide();
+          $("#quatro").hide();
+        });
+      });
+    </script>
+
+    <style type="text/css">
+      body {
+        background-color: #d8d8bf;
+      }
+      #img_gr {
+        width: 960px;
+        height: 600px;
+        border: solid;
+        overflow: hidden;
+      }
+      #img_pq img {
+        margin-left: 60px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="img_gr">
+      <img id="um" src="Arquivos/img/um.jpg" />
+      <img id="dois" src="Arquivos/img/dois.jpg" />
+      <img id="tres" src="Arquivos/img/tres.jpg" />
+      <img id="quatro" src="Arquivos/img/quatro.jpg" />
+    </div>
+
+    <div id="img_pq">
+      <img id="um_pq" src="Arquivos/img/um_pq.jpg" />
+      <img id="dois_pq" src="Arquivos/img/dois_pq.jpg" />
+      <img id="tres_pq" src="Arquivos/img/tres_pq.jpg" />
+      <img id="quatro_pq" src="Arquivos/img/quatro_pq.jpg" />
+    </div>
+  </body>
 </html>
