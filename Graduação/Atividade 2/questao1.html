@@ -36,7 +36,7 @@
 <body>
     <h1>Descubra o dia da semana em que você nasceu</h1>
     <div id="tela">
-        <label for="dataNascimento">Digite sua data de nascimento (DD/MM/AAAA): </label>
+        <label for="dataNascimento">Digite sua data de nascimento [DD/MM/AAAA]: </label>
         <input type="date" id="dataNascimento">
         <br/>
         <button onclick="mostrarDiaDaSemana()">Mostrar Dia Da Semana</button>
@@ -49,6 +49,7 @@
             if (dataNascimento) {
                 const data = new Date(dataNascimento);
                 const diasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+                
                 const dia = diasDaSemana[data.getUTCDay()];
                 if (dia == "Sábado" || dia == "Domingo"){
                   document.getElementById('resultado').innerText = `Você nasceu em um ${dia}.`;
