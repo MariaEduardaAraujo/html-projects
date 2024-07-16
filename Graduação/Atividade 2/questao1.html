@@ -26,8 +26,9 @@
             border-color: rgb(123, 122, 122); 
             border-radius: 3px;
         }
+        label {font-size: 18px;}
+        input {font-size: 13px;}
         body {background-color: #E7E9EB;}
-        #label {font-size: 18px;}
         p {color: rgb(0, 0, 0); font-size: 18px; margin-top: 12px;}
     </style>
 
@@ -35,8 +36,9 @@
 <body>
     <h1>Descubra o dia da semana em que você nasceu</h1>
     <div id="tela">
-        <label for="dataNascimento" id="label">Digite sua data de nascimento (DD/MM/AAAA): </label>
-        <input type="date" id="dataNascimento"></br>
+        <label for="dataNascimento">Digite sua data de nascimento (DD/MM/AAAA): </label>
+        <input type="date" id="dataNascimento">
+        <br/>
         <button onclick="mostrarDiaDaSemana()">Mostrar Dia Da Semana</button>
         <p id="resultado">Você nasceu em...</p>
     </div>
