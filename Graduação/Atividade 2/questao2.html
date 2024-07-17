@@ -33,19 +33,20 @@
         background-color: #e7e9eb;
       }
     </style>
-  </head>
-  <body>
-    <div id="div">
-      <h1>Jogo de Dado Virtual</h1>
-      <img id="dado" src="imagens/1.png" alt="Dado" />
-      <br />
-      <button onclick="jogarDado()">Jogar</button>
-    </div>
+
     <script>
       function jogarDado() {
         const numero = Math.floor(Math.random() * 6) + 1;
         document.getElementById("dado").src = `imagens/${numero}.png`;
       }
     </script>
+  </head>
+  <body>
+    <div id="div">
+      <h1>Jogo de Dado Virtual</h1>
+      <img id="dado" src="imagens/1.png"/>
+      <br/>
+      <button onclick="jogarDado()">Jogar</button>
+    </div>
   </body>
 </html>

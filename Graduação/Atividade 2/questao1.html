@@ -9,17 +9,17 @@
         div {
             text-align: center;
             border: 2px solid #ffffff;
-            width: 500px;
-            height: 105px;
+            width: 650px;
+            height: 200px;
             background-color: #ffffff;
             margin: 20px auto 0px auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
-            padding: 10px 30px 10px 10px;
+            padding: 3px 30px 10px 10px;
             border-radius: 5px;
         }
         button {
             padding: 5px; 
-            margin-top: 15px;
+            margin-top: 19px;
             background-color: #E7E9EB;
             border-style: solid;
             border-width: 2px; 
@@ -31,18 +31,7 @@
         body {background-color: #E7E9EB;}
         p {color: rgb(0, 0, 0); font-size: 18px; margin-top: 12px;}
     </style>
-
-</head>
-<body>
-    <h1>Descubra o dia da semana em que você nasceu</h1>
-    <div id="tela">
-        <label for="dataNascimento">Digite sua data de nascimento [DD/MM/AAAA]: </label>
-        <input type="date" id="dataNascimento">
-        <br/>
-        <button onclick="mostrarDiaDaSemana()">Mostrar Dia Da Semana</button>
-        <p id="resultado">Você nasceu em...</p>
-    </div>
-
+    
     <script>
         function mostrarDiaDaSemana() {
             const dataNascimento = document.getElementById('dataNascimento').value;
@@ -61,5 +50,16 @@
             }
         }
     </script>
+
+</head>
+<body>
+    <div id="tela">
+        <h1>Descubra o dia da semana em que você nasceu</h1>
+        <label for="dataNascimento">Digite sua data de nascimento [DD/MM/AAAA]: </label>
+        <input type="date" id="dataNascimento">
+        <br/>
+        <button onclick="mostrarDiaDaSemana()">Mostrar Dia</button>
+        <p id="resultado">Você nasceu em...</p>
+    </div>
 </body>
 </html>
