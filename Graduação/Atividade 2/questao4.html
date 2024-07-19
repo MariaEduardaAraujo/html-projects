@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--Feitas pelo João-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa da casa com luzes</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 0.4px;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        #sala {
+            width: 200px;
+            height: 500px;
+        }
+
+        #cozinha {
+            width: 450px;
+            height: 200px;
+        }
+
+        #quarto {
+            width: 350px;
+            height: 300px;
+        }
+
+        #sala,
+        #quarto,
+        #cozinha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px black solid;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+        #sala>h1,
+        #quarto>h1,
+        #cozinha>h1 {
+            display: none;
+        }
+    </style>
+    <script>
+        const options = ["sala", "cozinha", "quarto"]
+        
+        const toggleLuzes = (event) => {
+            const arr = options.map((item) => {
+            if (item === event.target.id) {
+                document.getElementById(item).style = 'background-color: rgba(255, 252, 127, 0.8)'
+                document.getElementById(item).children[0].style = "display: flex"
+            }
+            else {
+                document.getElementById(item).style = 'background-color: rgba(0,0,0,0.6)'
+                document.getElementById(item).children[0].style = "display: none"
+            }
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="margin: 0px;">Mapa da Casa com Luzes</h1>
+    <h4 style="margin: 0px 0px 10px 0px;">Aperte em um dos comodos para revelar seus segredos!</h2>
+        <div class="container">
+            <div id="sala" onclick="toggleLuzes(event)">
+                <h1>SALA</h1>
+            </div>
+            <div class="container2">
+                <div id="cozinha" onclick="toggleLuzes(event)">
+                    <h1>COZINHA</h1>
+                </div>
+                <div id="quarto" onclick="toggleLuzes(event)">
+                    <h1>QUARTO</h1>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
