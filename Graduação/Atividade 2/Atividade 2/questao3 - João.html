@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!--Feita pelo João-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastar e Soltar Dividido</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+            justify-content: space-around;
+            align-items: center;
+            width: 50rem;
+        }
+
+        #quadrado {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #pontilhado {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border-style: dashed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        const pararComportamentoPadrao = (event) => {
+            event.preventDefault()
+        }
+
+        const arrastar = (event) => {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        const soltar = (event) => {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Arrastar e soltar divertido!</h1>
+    <div class="container">
+        <div id="quadrado" draggable="true" ondragstart="arrastar(event)">Posso ser arrastado!</div>
+        <div id="pontilhado" ondrop="soltar(event)" ondragover="pararComportamentoPadrao(event)"></div>
+    </div>
+</body>
+
+</html>
