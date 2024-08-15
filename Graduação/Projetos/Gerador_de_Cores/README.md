@@ -1,8 +1,8 @@
-# Gerador de Cores Aleatório
+# Gerador de Cores Aleatório 🌈🎲
 
 O Gerador de Cores Aleatório é uma aplicação web que gera e exibe cinco cores aleatórias em quadrados. Também permite copiar as cores geradas para a área de transferência com um clique de botão.
 
-## Funcionalidades
+## Funcionalidades ⚙
 
 - **Gerar Cores:** Gera cinco cores aleatórias e exibe cada uma em um quadrado.
 - **Copiar Cores:** Copia todas as cores geradas para a área de transferência.
@@ -19,7 +19,7 @@ O Gerador de Cores Aleatório é uma aplicação web que gera e exibe cinco core
    - Clique no botão **"Copiar"** para copiar os códigos hexadecimais das cinco cores para a área de transferência.
    - Você pode colar os códigos onde desejar.
 
-## Requisitos
+## Requisitos 📝
 
 Um navegador web moderno que suporte JavaScript.
 
