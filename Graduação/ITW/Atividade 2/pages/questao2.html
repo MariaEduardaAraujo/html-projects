@@ -37,14 +37,14 @@
     <script>
       function jogarDado() {
         const numero = Math.floor(Math.random() * 6) + 1;
-        document.getElementById("dado").src = `assets/imagens/${numero}.png`;
+        document.getElementById("dado").src = `../assets/imagens/${numero}.png`;
       }
     </script>
   </head>
   <body>
     <div id="div">
       <h1>Jogo de Dado Virtual</h1>
-      <img id="dado" src="assets\imagens\1.png"/>
+      <img id="dado" src="..\assets\imagens\1.png"/>
       <br/>
       <button onclick="jogarDado()">Jogar</button>
     </div>
