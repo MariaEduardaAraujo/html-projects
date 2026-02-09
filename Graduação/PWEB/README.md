@@ -19,9 +19,6 @@ Ele foi criado com o objetivo acadêmico de demonstrar a estrutura mínima de um
 4. Abra-o com qualquer navegador web.
 
 ## 📁 Estrutura de pastas do projeto
-/
- ├── assets/
- ├── script/
- ├── style/
- ├── index.html
+/ \
+ ├── index.html \
  └── README.md
