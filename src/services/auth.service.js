@@ -9,7 +9,7 @@
         async criar({ nome, email, senha, papel = "OPERADOR" }){
             const autenticacaoEmail = await this.usuariosRepository.buscarPorEmail(email)
             if(autenticacaoEmail){
-                throw new AppError("E-mail duplicado", 409);
+                throw new AppError("Credenciais inválidas", 409);
             }
 
             const senhaHash = await bcrypt.hash(senha, 10);
