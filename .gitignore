@@ -5,3 +5,4 @@ node_modules
 /src/generated/prisma
 .env
 Atividade 15 — Delivery Tracker_ Suíte Completa de Testes Automatizados.pdf
+.env.test
