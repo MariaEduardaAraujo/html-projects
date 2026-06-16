@@ -35,11 +35,12 @@ export default function Login() {
           <h1>Delivery Tracker</h1>
           <p>Acesse o painel de controle</p>
         </div>
-        {erro && <div className="alert alert-erro">{erro}</div>}
+        {erro && <div data-testid="alerta-erro" className="alert alert-erro">{erro}</div>}
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
             <label>E-mail</label>
             <input
+              data-testid="input-email"
               type="email"
               value={form.email}
               onChange={e => setForm({ ...form, email: e.target.value })}
@@ -50,6 +51,7 @@ export default function Login() {
           <div className="form-group">
             <label>Senha</label>
             <input
+              data-testid="input-senha"
               type="password"
               value={form.senha}
               onChange={e => setForm({ ...form, senha: e.target.value })}
@@ -57,7 +59,7 @@ export default function Login() {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary auth-btn" disabled={carregando}>
+          <button data-testid="btn-login" type="submit" className="btn btn-primary auth-btn" disabled={carregando}>
             {carregando ? 'Entrando...' : 'Entrar'}
           </button>
         </form>
