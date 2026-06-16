@@ -6,7 +6,6 @@ test('login inválido exibe mensagem de erro', async ({ page }) => {
     await loginPage.goto()
     await loginPage.login('errado@email.com', 'senhaerrada')
 
-    await loginPage.alertaErro.waitFor({ state: 'visible' })
     await expect(loginPage.alertaErro).toBeVisible()
     await expect(page).not.toHaveURL('/entregas')
 })
