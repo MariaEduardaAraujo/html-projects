@@ -10,7 +10,7 @@ export default {
     '!src/config/**',
     '!src/server.js',
   ],
-  coverageThresholds: {
+  coverageThreshold: {
     global: {
       statements: 80,
       branches:   75,
