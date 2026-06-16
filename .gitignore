@@ -6,3 +6,6 @@ node_modules
 .env
 Atividade 15 — Delivery Tracker_ Suíte Completa de Testes Automatizados.pdf
 .env.test
+/coverage
+/test-results
+frontend/tests/e2e/test-results
