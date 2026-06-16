@@ -3,12 +3,12 @@ dotenv.config({ path: '.env.test' })
 
 export default {
   testEnvironment:    'node',
-  transform:          {},              // sem transpilação — Node nativo com ESM
+  transform:          {},
   testMatch: ['**/tests/**/*.test.js', '**/tests/**/*.spec.js'],
   collectCoverageFrom: [
     'src/**/*.js',
-    '!src/config/**',                  // exclui arquivos de configuração
-    '!src/server.js',                  // exclui ponto de entrada
+    '!src/config/**',
+    '!src/server.js',
   ],
   coverageThresholds: {
     global: {
