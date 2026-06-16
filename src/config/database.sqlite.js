@@ -1,6 +1,7 @@
-import Database from 'better-sqlite3';
+import Database from 'better-sqlite3'
 
-const database = new Database('dev.db');
+const db = process.env.DATABASE_URL?.replace('file:./', '') ?? 'dev.db'
+const database = new Database(db)
 database.pragma('foreign_keys = ON')
 
-export default database;
+export default database
