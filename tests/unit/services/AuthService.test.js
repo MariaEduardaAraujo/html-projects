@@ -3,7 +3,7 @@ import { AutenticacaoService } from '../../../src/services/auth.service.js';
 import { AppError } from '../../../src/utils/AppError.js';
 import bcrypt from 'bcrypt';
 
-process.env.JWT_SECRET = 'segredo_teste';
+process.env.JWT_SECRET = 'segredo_para_testes_apenas';
 process.env.JWT_EXPIRES_IN = '1h';
 
 describe('EntregasService', () => {
