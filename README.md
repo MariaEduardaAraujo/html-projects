@@ -250,3 +250,34 @@ curl http://localhost:3000/api/motoristas/1/entregas
 ```bash
 curl http://localhost:3000/api/relatorios/entregas-por-status
 ```
+
+## Análise de Brechas de Cobertura de Testes
+
+Esta seção documenta os trechos críticos de código que atualmente possuem cobertura zero de testes, avaliando os riscos associados e a necessidade de implementação de testes futuros.
+
+### 1. Módulo de Motoristas: (`motoristas.repository.prisma.js`)
+* **Status de Cobertura:** 0% de Linhas, Instruções e Funções (Linhas 6-37).
+
+#### Por que este trecho não está sendo testado?
+Os testes focaram majoritariamente no que foi pedido na atividade 15. Desta forma, os testes de motoristas acabaram sendo negligenciados.
+
+#### Qual seria o impacto de um bug nele?
+O impacto pode ser **crítico**, já que o arquivo é o responsável direto por conectar-se com o banco de dados (via Prisma ORM) para salvar e buscar motoristas. Em caso de errosde sintaxe ou de mapeamento de campos, pode ocorrer:
+* Falha na associação de motoristas novos às entregas.
+* Falhas de banco de dados (como quebra de chaves estrangeiras) podem travar as requisições.
+
+#### Vale a pena escrever um teste? Sim
+---
+
+### 2. Regras de Negócio de Motoristas: (`motoristas.service.js`)
+* **Status de Cobertura:** 7.14% Stmts | 8.69% Lines (Linhas não cobertas: 9-42).
+
+#### Por que este trecho não está sendo testado?
+Pelos mesmos motivos do repositório
+
+#### Qual seria o impacto de um bug nele?
+O impacto é **alto** já que a camada de serviço abriga as validações de negócio do sistema. Um bug aqui poderia permitir:
+* Cadastros duplicados de motoristas no sistema.
+* Falhas na propagação de erros customizados (como o `AppError`), fazendo com que o frontend não saiba tratar erros de validação vindos do backend.
+
+#### Vale a pena escrever um teste? Sim
