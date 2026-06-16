@@ -12,8 +12,12 @@ export class LoginPage {
     }
 
     async login(email, senha) {
-        await this.inputEmail.fill(email)
-        await this.inputSenha.fill(senha)
+        await this.inputEmail.clear()
+        await this.inputSenha.clear()
+
+        await this.inputEmail.pressSequentially(email, { delay: 50 })
+        await this.inputSenha.pressSequentially(senha, { delay: 50 })
+        
         await this.btnLogin.click()
     }
 }
