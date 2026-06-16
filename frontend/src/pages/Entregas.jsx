@@ -68,7 +68,7 @@ export default function Entregas() {
         ) : entregas.length === 0 ? (
           <p style={{ color: 'var(--muted)', textAlign: 'center', padding: 32 }}>Nenhuma entrega encontrada.</p>
         ) : (
-          <table>
+          <table data-testid="tabela-entregas">
             <thead>
               <tr>
                 <th>#</th>
