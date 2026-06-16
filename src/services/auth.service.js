@@ -1,3 +1,4 @@
+    import regex from 'regex'
     import bcrypt from 'bcrypt'
     import { AppError } from "../utils/AppError.js"
     import { gerarAccessToken } from '../utils/jwt.js'
@@ -7,11 +8,15 @@
             this.usuariosRepository = usuariosRepository
         }
         async criar({ nome, email, senha, papel = "OPERADOR" }){
+            if (!senha || senha.length < 8){
+                throw new AppError("Senha deve ter no mínimo 8 caracteres", 400)
+            }
+
             const autenticacaoEmail = await this.usuariosRepository.buscarPorEmail(email)
             if(autenticacaoEmail){
                 throw new AppError("Credenciais inválidas", 409);
             }
-
+            
             const senhaHash = await bcrypt.hash(senha, 10);
             return this.usuariosRepository.criar({ nome, email, senhaHash, papel })
         }
