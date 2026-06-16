@@ -41,11 +41,11 @@ export default function Layout({ children }) {
             <span className={`badge badge-${usuario?.papel}`}>{usuario?.papel}</span>
             {usuario?.nome}
           </span>
-          <button className="btn btn-ghost" onClick={handleLogout}>Sair</button>
+          <button data-testid="btn-sair" className="btn btn-ghost" onClick={handleLogout}>Sair</button>
         </div>
       </nav>
       <main className="main-content">
-        {children}
+        {children} 
       </main>
     </div>
   )
