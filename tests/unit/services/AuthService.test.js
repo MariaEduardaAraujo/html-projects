@@ -22,33 +22,33 @@ describe('EntregasService', () => {
     describe('Logar', () => {
         it('deve lançar AppError com status 401 se o e-mail não existir', async () => {
             usuariosRepo.buscarPorEmail.mockResolvedValue(null)
-            const usuario = { email: 'nãoexistenobanco@email.com', senha: 'hash'}
+            const usuario = { email: 'nãoexistenobanco@email.com', senha: 'hashsenha'}
         
             await expect(service.login(usuario))
                 .rejects.toMatchObject({ mensagem: "Credenciais inválidas", status: 401})
         })
 
         it('deve lançar AppError com status 401 se a senha estiver incorreta', async () => {
-            usuariosRepo.buscarPorEmail.mockResolvedValue({ id: 1, senhaHash: 'hash'})
+            usuariosRepo.buscarPorEmail.mockResolvedValue({ id: 1, senhaHash: 'hashsenha'})
             jest.spyOn(bcrypt, 'compare').mockResolvedValue(false)
-            const usuario = { email: 'nãoexistenobanco@email.com', senha: 'errada'}
+            const usuario = { email: 'nãoexistenobanco@email.com', senha: 'erradasenha'}
 
             await expect(service.login(usuario))
                 .rejects.toMatchObject({ mensagem: "Credenciais inválidas", status: 401})
         })
 
         it('deve retornar o accessToken, refreshToken e o objeto usuário para o login correto', async () => {
-            usuariosRepo.buscarPorEmail.mockResolvedValue({ id: 1, nome: 'User', email: 'nãoexistenobanco@email.com', papel: 'OPERADOR', senhaHash: 'hash'})
+            usuariosRepo.buscarPorEmail.mockResolvedValue({ id: 1, nome: 'User', email: 'nãoexistenobanco@email.com', papel: 'OPERADOR', senhaHash: 'hashsenha'})
             jest.spyOn(bcrypt, 'compare').mockResolvedValue(true)
-            const resultado = await service.login({ email: 'nãoexistenobanco@email.com', senha: 'hash'})
+            const resultado = await service.login({ email: 'nãoexistenobanco@email.com', senha: 'hashsenha'})
 
             expect(resultado).toHaveProperty('accessToken')
         })
 
         it('não deve retornar o campo senha para o login correto', async () => {
-            usuariosRepo.buscarPorEmail.mockResolvedValue({ id: 1, nome: 'User', email: 'nãoexistenobanco@email.com', papel: 'OPERADOR', senhaHash: 'hash'})
+            usuariosRepo.buscarPorEmail.mockResolvedValue({ id: 1, nome: 'User', email: 'nãoexistenobanco@email.com', papel: 'OPERADOR', senhaHash: 'hashsenha'})
             jest.spyOn(bcrypt, 'compare').mockResolvedValue(true)
-            const resultado = await service.login({ email: 'nãoexistenobanco@email.com', senha: 'hash'})
+            const resultado = await service.login({ email: 'nãoexistenobanco@email.com', senha: 'hashsenha'})
 
             expect(resultado).not.toHaveProperty('senha')
             expect(resultado).not.toHaveProperty('senhaHash')
@@ -59,7 +59,7 @@ describe('EntregasService', () => {
             const usuario = { email: 'nãoexistenobanco@email.com'}
             usuariosRepo.buscarPorEmail.mockResolvedValue({ id: 1, ...usuario })
         
-            await expect(service.criar({ nome: 'Maria', ...usuario, senha: 'hash'}))
+            await expect(service.criar({ nome: 'Maria', ...usuario, senha: 'hashsenha'}))
                 .rejects.toMatchObject({ mensagem: "Credenciais inválidas", status: 409})
             expect(usuariosRepo.criar).not.toHaveBeenCalled()
         })
@@ -68,7 +68,7 @@ describe('EntregasService', () => {
             const spy = jest.spyOn(bcrypt, 'hash').mockResolvedValue('hash_falso')
             usuariosRepo.criar.mockResolvedValue({ id: 1})
         
-            await service.criar({ nome: 'Maria', email: 'nãoexistenobanco@email.com', senha: 'hash'})
+            await service.criar({ nome: 'Maria', email: 'nãoexistenobanco@email.com', senha: 'hashsenha'})
 
             expect(spy).toHaveBeenCalled()
             expect(usuariosRepo.criar).toHaveBeenCalledWith(
