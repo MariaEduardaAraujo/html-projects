@@ -1,0 +1,71 @@
+/*Autores: Maria Eduarda de Araújo e Raphael Anacleto*/
+body{
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 19px;
+    background-image: 90%;
+}
+/*Menu Suspenso*/    
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: #1170A0;
+}
+  
+li {float: right;}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover:not(.active) {background-color: #179adbd2;}
+
+li a, .aulas-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li.menu-suspenso {display: inline-block;}
+
+.menu-suspenso-aula {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.menu-suspenso-aula a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-menu a:hover {background-color: #f1f1f1;}
+  
+.menu-suspenso:hover .menu-suspenso-aula {display: block;}
+
+/*Corpo*/
+#div-img {
+    padding-bottom: 20px;
+    width: 200vh;
+}
+#texto{
+    position: absolute;
+    top: 109vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 610px;
+}
