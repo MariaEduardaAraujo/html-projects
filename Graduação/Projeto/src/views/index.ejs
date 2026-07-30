@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palato Counter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Ele já falou Palato hoje?</h1>
+    <div class="counter-display">
+      <div class="count-number"><%= total %></div>
+      <div class="count-label">vezes hoje</div>
+    </div>
+    <div class="buttons">
+      <form action="/remove" method="POST" style="flex:1">
+        <button type="submit" class="btn-remove">−1</button>
+      </form>
+      <form action="/add" method="POST" style="flex:1">
+        <button type="submit" class="btn-add">+1</button>
+      </form>
+    </div>
+    <div class="history">
+      <div class="history-title">Registros de hoje</div>
+      <% if (registro.length === 0) { %>
+        <div class="empty">Nenhum registro ainda.</div>
+      <% } else { %>
+        <div class="history-list">
+          <% registro.forEach(r => { %>
+            <div class="history-item">
+              <span><%= r.criado_em %></span>
+              <span class="qty"><%= r.quantidade %></span>
+            </div>
+          <% }) %>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
